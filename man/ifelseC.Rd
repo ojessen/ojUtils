@@ -16,7 +16,7 @@ ifelseC(test, yes, no)
 This function is a port of ifelse from base. Usually the behaviour should be identical.
 }
 \examples{
-test = c(T,F,NA); yes = c(1,1,1); no = c(2,2,2)
+test = c(TRUE,FALSE,NA); yes = c(1,1,1); no = c(2,2,2)
 all(ifelseC(test, yes, no) == ifelse(test, yes, no))
 }
 
