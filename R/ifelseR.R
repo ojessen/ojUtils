@@ -9,7 +9,7 @@
 #' @export
 #' @useDynLib ojUtils
 #' @examples
-#' test = c(T,F,NA); yes = c(1,1,1); no = c(2,2,2)
+#' test = c(TRUE,FALSE,NA); yes = c(1,1,1); no = c(2,2,2)
 #' all(ifelseC(test, yes, no) == ifelse(test, yes, no))
 
 ifelseC = function(test, yes, no){
