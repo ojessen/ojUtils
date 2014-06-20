@@ -7,6 +7,7 @@
 #' @param no numerical, character, integer or logical vector for cases where test is FALSE.
 
 #' @export
+#' @useDynLib ojUtils
 #' @examples
 #' test = c(T,F,NA); yes = c(1,1,1); no = c(2,2,2)
 #' all(ifelseC(test, yes, no) == ifelse(test, yes, no))
