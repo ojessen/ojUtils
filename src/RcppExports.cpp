@@ -22,23 +22,6 @@ BEGIN_RCPP
     return __sexp_result;
 END_RCPP
 }
-// ifelseCChar
-CharacterVector ifelseCChar(LogicalVector test, CharacterVector yes, CharacterVector no);
-RcppExport SEXP ojUtils_ifelseCChar(SEXP testSEXP, SEXP yesSEXP, SEXP noSEXP) {
-BEGIN_RCPP
-    SEXP __sexp_result;
-    {
-        Rcpp::RNGScope __rngScope;
-        Rcpp::traits::input_parameter< LogicalVector >::type test(testSEXP );
-        Rcpp::traits::input_parameter< CharacterVector >::type yes(yesSEXP );
-        Rcpp::traits::input_parameter< CharacterVector >::type no(noSEXP );
-        CharacterVector __result = ifelseCChar(test, yes, no);
-        PROTECT(__sexp_result = Rcpp::wrap(__result));
-    }
-    UNPROTECT(1);
-    return __sexp_result;
-END_RCPP
-}
 // ifelseCLogic
 LogicalVector ifelseCLogic(LogicalVector test, LogicalVector yes, LogicalVector no);
 RcppExport SEXP ojUtils_ifelseCLogic(SEXP testSEXP, SEXP yesSEXP, SEXP noSEXP) {
@@ -67,6 +50,23 @@ BEGIN_RCPP
         Rcpp::traits::input_parameter< IntegerVector >::type yes(yesSEXP );
         Rcpp::traits::input_parameter< IntegerVector >::type no(noSEXP );
         IntegerVector __result = ifelseCInt(test, yes, no);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
+// ifelseCChar
+CharacterVector ifelseCChar(LogicalVector test, CharacterVector yes, CharacterVector no);
+RcppExport SEXP ojUtils_ifelseCChar(SEXP testSEXP, SEXP yesSEXP, SEXP noSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< LogicalVector >::type test(testSEXP );
+        Rcpp::traits::input_parameter< CharacterVector >::type yes(yesSEXP );
+        Rcpp::traits::input_parameter< CharacterVector >::type no(noSEXP );
+        CharacterVector __result = ifelseCChar(test, yes, no);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
     UNPROTECT(1);

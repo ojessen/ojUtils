@@ -5,15 +5,15 @@ ifelseCNum <- function(test, yes, no) {
     .Call('ojUtils_ifelseCNum', PACKAGE = 'ojUtils', test, yes, no)
 }
 
-ifelseCChar <- function(test, yes, no) {
-    .Call('ojUtils_ifelseCChar', PACKAGE = 'ojUtils', test, yes, no)
-}
-
 ifelseCLogic <- function(test, yes, no) {
     .Call('ojUtils_ifelseCLogic', PACKAGE = 'ojUtils', test, yes, no)
 }
 
 ifelseCInt <- function(test, yes, no) {
     .Call('ojUtils_ifelseCInt', PACKAGE = 'ojUtils', test, yes, no)
+}
+
+ifelseCChar <- function(test, yes, no) {
+    .Call('ojUtils_ifelseCChar', PACKAGE = 'ojUtils', test, yes, no)
 }
 
