@@ -1,5 +1,6 @@
 ojUtils
 =======
+[![Build Status](https://travis-ci.org/ojessen/ojUtils.svg?branch=master)](https://travis-ci.org/ojessen/ojUtils)
 
 Collection of functions I find useful.
 
