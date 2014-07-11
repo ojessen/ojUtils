@@ -37,3 +37,15 @@ ifelseC = function(test, yes, no){
   }
   out
 }
+
+#' combn replacement
+#'
+#' This function is an adaptation of combn from base. currently the options are limited, and implying a value of m = 2.
+#'
+#' @param x is an integer vector, representing a sequence starting at 1.
+
+#' @export
+#' @useDynLib ojUtils
+combn_C = function(x){
+  internal_combn_C(x)
+}

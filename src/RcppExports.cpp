@@ -5,6 +5,21 @@
 
 using namespace Rcpp;
 
+// internal_combn_C
+IntegerMatrix internal_combn_C(IntegerVector x);
+RcppExport SEXP ojUtils_internal_combn_C(SEXP xSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< IntegerVector >::type x(xSEXP );
+        IntegerMatrix __result = internal_combn_C(x);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
 // ifelseCNum
 NumericVector ifelseCNum(LogicalVector test, NumericVector yes, NumericVector no);
 RcppExport SEXP ojUtils_ifelseCNum(SEXP testSEXP, SEXP yesSEXP, SEXP noSEXP) {

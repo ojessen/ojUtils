@@ -1,7 +1,9 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
+
 template <typename Vec>
+
 Vec safe_ifelse( LogicalVector test, Vec yes, Vec no){
     int n_test = test.size(), n_yes = yes.size(), n_no = no.size();
     if(n_test != n_yes | n_yes != n_no) stop("Different length of input vectors");
@@ -45,3 +47,6 @@ CharacterVector ifelseCChar(LogicalVector test, CharacterVector yes, CharacterVe
   
   return out;
 }
+
+
+
