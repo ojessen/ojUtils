@@ -51,5 +51,6 @@ ifelseC = function(test, yes, no){
 #' all(combn(x,2)==combn_C(x))
 #' 
 combn_C = function(x){
+  require(Rcpp)
   internal_combn_C(x)
 }
