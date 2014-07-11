@@ -11,4 +11,8 @@ combn_C(x)
 \description{
 This function is an adaptation of combn from base. currently the options are limited, and implying a value of m = 2.
 }
+\examples{
+x = 1:4
+all(combn(x,2)==combn_C(x))
+}
 

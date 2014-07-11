@@ -46,6 +46,10 @@ ifelseC = function(test, yes, no){
 
 #' @export
 #' @useDynLib ojUtils
+#' @examples
+#' x = 1:4
+#' all(combn(x,2)==combn_C(x))
+#' 
 combn_C = function(x){
   internal_combn_C(x)
 }
