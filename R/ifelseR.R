@@ -23,15 +23,24 @@ ifelseC = function(test, yes, no){
   }
   type_yes = typeof(yes)
   type_no = typeof(no)
+  if(length(yes) != length(no)){
+    if(length(yes) == 1){
+      yes = rep(yes, length(no))
+    } else if(length(no) == 1){
+      no = rep(no, length(yes))
+    } else {
+      stop("Length of yes, no not equal")
+    }
+  }
   stopifnot(type_yes == type_no)
   if(type_yes == "double"){
-    out = try(ifelseCNum(test, yes, no))
+    out = ifelseCNum(test, yes, no)
   } else if(type_yes == "character"){
-    out = try(ifelseCChar(test, yes, no))
+    out = ifelseCChar(test, yes, no)
   } else if(type_yes == "integer"){
-    out = try(ifelseCInt(test, yes, no))
+    out = ifelseCInt(test, yes, no)
   } else if(type_yes == "logical"){
-    out = try(ifelseCLogic(test, yes, no))
+    out = ifelseCLogic(test, yes, no)
   } else{
     stop(paste("type", type_yes, "not supported."))
   }
