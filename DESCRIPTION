@@ -1,8 +1,8 @@
 Package: ojUtils
 Type: Package
 Title: A collection of utility functions
-Version: 0.01
-Date: 2014-06-20
+Version: 0.1.0
+Date: 2018-08-27
 Author: Owe Jessen
 Maintainer: Owe Jessen <post@owejessen.de>
 Description: This is supposed to become a collection of utility functions.
@@ -11,3 +11,4 @@ License: MIT
 Imports:
     Rcpp (>= 0.11.0)
 LinkingTo: Rcpp
+RoxygenNote: 6.1.0
