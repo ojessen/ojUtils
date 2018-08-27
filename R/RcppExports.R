@@ -21,3 +21,7 @@ ifelseCChar <- function(test, yes, no) {
     .Call('ojUtils_ifelseCChar', PACKAGE = 'ojUtils', test, yes, no)
 }
 
+seqC <- function(x, y, by) {
+    .Call('ojUtils_seqC', PACKAGE = 'ojUtils', x, y, by)
+}
+
