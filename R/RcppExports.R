@@ -19,6 +19,7 @@ ifelseCInt <- function(test, yes, no) {
 
 ifelseCChar <- function(test, yes, no) {
     .Call('_ojUtils_ifelseCChar', PACKAGE = 'ojUtils', test, yes, no)
+<<<<<<< HEAD
 }
 
 seqC <- function(x, y, by) {
@@ -27,5 +28,7 @@ seqC <- function(x, y, by) {
 
 triang2cf_C <- function(triang) {
     .Call('_ojUtils_triang2cf_C', PACKAGE = 'ojUtils', triang)
+=======
+>>>>>>> 14c99d44ca7f028e9a6d72253754dc51532607c6
 }
 
