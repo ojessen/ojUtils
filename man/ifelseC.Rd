@@ -16,6 +16,9 @@ ifelseC(test, yes, no)
 \description{
 This function is a port of ifelse from base. Usually the behaviour should be identical.
 }
+\details{
+The parameters must have the same length, or, in the case of yes or no, length must be 1.
+}
 \examples{
 test = c(TRUE,FALSE,NA); yes = c(1,1,1); no = c(2,2,2)
 all(ifelseC(test, yes, no) == ifelse(test, yes, no))

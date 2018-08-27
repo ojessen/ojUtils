@@ -8,6 +8,7 @@
 
 #' @export
 #' @useDynLib ojUtils
+#' @details The parameters must have the same length, or, in the case of yes or no, length must be 1.
 #' @examples
 #' test = c(TRUE,FALSE,NA); yes = c(1,1,1); no = c(2,2,2)
 #' all(ifelseC(test, yes, no) == ifelse(test, yes, no))
@@ -21,6 +22,20 @@ ifelseC = function(test, yes, no){
     test = try(as.logical(test))
     stopifnot(typeof(test)== "logical")
   }
+  
+  l_test = length(test)
+  l_yes = length(yes)
+  l_no = length(no)
+  l_max = max(l_test, l_yes, l_no)
+  
+  if(l_yes == 1){
+    yes = rep(yes,l_max)
+  }
+  
+  if(l_no == 1){
+    no = rep(no, l_max)
+  }
+  
   type_yes = typeof(yes)
   type_no = typeof(no)
   stopifnot(type_yes == type_no)

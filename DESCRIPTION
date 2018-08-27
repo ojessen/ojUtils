@@ -1,14 +1,17 @@
 Package: ojUtils
 Type: Package
 Title: A collection of utility functions
-Version: 0.1.0
+Version: 0.1.1
 Date: 2018-08-27
 Author: Owe Jessen
 Maintainer: Owe Jessen <post@owejessen.de>
 Description: This is supposed to become a collection of utility functions.
-    Currently it has one function, a port of ifelse to c++.
+    Currently it consists of two functions, ifelseC, which is a port of ifelse from base, 
+    and combn_C, which is a simple adaptaion of combn, restricted to m=2.
 License: GPL-3
 Imports:
-    Rcpp (>= 0.11.0)
+    Rcpp (>= 0.11.0),
+    testthat
 LinkingTo: Rcpp
 RoxygenNote: 6.1.0
+Suggests: testthat
