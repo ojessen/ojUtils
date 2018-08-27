@@ -68,7 +68,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-<<<<<<< HEAD
 // seqC
 NumericVector seqC(double x, double y, double by);
 RcppExport SEXP _ojUtils_seqC(SEXP xSEXP, SEXP ySEXP, SEXP bySEXP) {
@@ -93,8 +92,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-=======
->>>>>>> 14c99d44ca7f028e9a6d72253754dc51532607c6
 
 static const R_CallMethodDef CallEntries[] = {
     {"_ojUtils_internal_combn_C", (DL_FUNC) &_ojUtils_internal_combn_C, 1},
@@ -102,11 +99,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_ojUtils_ifelseCLogic", (DL_FUNC) &_ojUtils_ifelseCLogic, 3},
     {"_ojUtils_ifelseCInt", (DL_FUNC) &_ojUtils_ifelseCInt, 3},
     {"_ojUtils_ifelseCChar", (DL_FUNC) &_ojUtils_ifelseCChar, 3},
-<<<<<<< HEAD
     {"_ojUtils_seqC", (DL_FUNC) &_ojUtils_seqC, 3},
     {"_ojUtils_triang2cf_C", (DL_FUNC) &_ojUtils_triang2cf_C, 1},
-=======
->>>>>>> 14c99d44ca7f028e9a6d72253754dc51532607c6
     {NULL, NULL, 0}
 };
 

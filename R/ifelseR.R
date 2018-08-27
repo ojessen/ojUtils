@@ -13,7 +13,7 @@
 #' all(ifelseC(test, yes, no) == ifelse(test, yes, no))
 
 ifelseC = function(test, yes, no){
-  require(Rcpp)
+  requireNamespace("Rcpp")
   if(typeof(test) == "list"){
     test = unlist(test)
   }
@@ -51,6 +51,6 @@ ifelseC = function(test, yes, no){
 #' all(combn(x,2)==combn_C(x))
 #' 
 combn_C = function(x){
-  require(Rcpp)
+  requireNamespace("Rcpp")
   internal_combn_C(x)
 }

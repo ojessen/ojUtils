@@ -6,7 +6,7 @@ template <typename Vec>
 
 Vec safe_ifelse( LogicalVector test, Vec yes, Vec no){
     int n_test = test.size(), n_yes = yes.size(), n_no = no.size();
-    if(n_test != n_yes | n_yes != n_no) stop("Different length of input vectors");
+    if((n_test != n_yes )| (n_yes != n_no)) stop("Different length of input vectors");
     return ifelse(test, yes, no);
 }
 
@@ -31,7 +31,7 @@ IntegerVector ifelseCInt(LogicalVector test, IntegerVector yes, IntegerVector no
 // [[Rcpp::export]]
 CharacterVector ifelseCChar(LogicalVector test, CharacterVector yes, CharacterVector no) {
   int n_test = test.size(), n_yes = yes.size(), n_no = no.size();
-  if(n_test != n_yes | n_yes != n_no) stop("Different length of input vectors");
+  if((n_test != n_yes) | (n_yes != n_no)) stop("Different length of input vectors");
   
   CharacterVector out(n_test);
   LogicalVector test_na = is_na(test);
